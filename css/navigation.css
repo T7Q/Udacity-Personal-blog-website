@@ -1,0 +1,31 @@
+.navigation {
+	grid-area: nav;
+}
+
+.navigation-list {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.navigation-item {
+	margin: 0 auto;
+}
+
+.navigation-item a {
+	text-decoration: none;
+	color: #0AAFF1;
+	font-size: 2vw;
+	font-weight: 1000;
+}
+
+
+.navigation-item a:hover {
+	color: #0444BF;
+}
+
+/* screens wider than 1001px - Desktop */
+/* screens from 481px to 1000px - Tablet */
+/* screens narrower than 480px - Mobile */

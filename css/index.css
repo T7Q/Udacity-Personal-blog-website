@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/css?family=Cormorant+Garamond:700i|Fira+Sans);
+@import "navigation.css";
+@import "social.css";
+@import "cards.css";
+
+.body {
+	background-color: #A79674;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 40px auto 60px auto 60px;
+	grid-template-areas:
+	"social"
+	"hd"
+	"nav"
+	"main"
+	"footer";
+}
+
+.social {
+	grid-area: social;
+	background: #A79674;
+	background: #A796741A;
+}
+
+
+.social_box{
+	display: flex;
+	padding: 0;
+	flex-direction: row;
+	margin: 5px;
+	justify-content: left;
+}
+
+.social_icon {
+	width: 2rem;
+}
+
+
+.header {
+	
+	grid-area: hd;
+	text-align: center;
+	background-image: url("/img/blog_images/kajaking.jpg");
+	background-size:contain;
+}
+
+.header h1 {
+	color: #0444BF;
+	font-family: 'Cormorant Garamond', Serif;
+	font-size: 5vw;
+}
+
+.main {
+	grid-area: main;
+	background: linear-gradient(#A796741A, white);
+}
+
+.main h2 {
+	color: #0584F2;
+	font-weight: 1000;
+	text-align: center;
+	font-family: 'Cormorant Garamond', Serif;
+	font-size: 2vw;
+}
+
+.footer {
+	grid-area: footer;
+	text-align: center;
+	align-content: center;
+	background: #0AAFF1;
+	color: white;
+}
+
+
+@media (min-width: 600px) and (max-width: 900px) {
+	.card_holder {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	/* .card {
+		min-height: 250px;
+		min-width: 250px;
+		margin: 10px;
+	} */
+}
+
+@media (min-width: 901px) {
+	.card_holder {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	/* .card {
+		min-height: 250px;
+		min-width: 250px;
+		margin: 10px;
+	} */
+}
