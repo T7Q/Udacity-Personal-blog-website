@@ -3,6 +3,10 @@
 @import "social.css";
 @import "cards.css";
 
+html {
+	font-family: 'Cormorant Garamond', Serif;
+}
+
 .body {
 	background-color: #A79674;
 }
@@ -19,29 +23,11 @@
 	". ft .";
 }
 
-.social {
-	grid-area: social;
-	background: #A796741A;
-	align-self: center;
-}
-
-.social_box {
-	display: flex;
-	padding: 0;
-	flex-direction: row;
-	justify-content: left;
-}
-
-.social_icon {
-	width: 30px;
-	margin-right: 0.5rem;
-}
-
 .header {
 	grid-area: hd;
 	text-align: center;
 	height: 200px;
-	background-image: url("../img/blog_images/banner3.jpg");
+	background-image: url("../img/blog_images/banner.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -49,15 +35,13 @@
 
 .header h1 {
 	color: white;
-	font-family: 'Cormorant Garamond', Serif;
-	font-size: 4vw;
+	font-size: 30px;
 	text-align: center;
 	margin-top: 0;
 }
 
 .main {
 	grid-area: main;
-	/* background-color: #A796741A; */
 	background: linear-gradient(#A7967433, #A796741A);
 }
 
@@ -65,8 +49,7 @@
 	color: #0584F2;
 	font-weight: 1000;
 	text-align: center;
-	font-family: 'Cormorant Garamond', Serif;
-	font-size: 2vw;
+	font-size: 24px;
 }
 
 .footer {
@@ -78,8 +61,8 @@
 	color: white;
 }
 
-.footer p{
-	font-size: 1vw;
+.footer p {
+	font-size: 16px;
 }
 
 /* Medium Screens */
@@ -91,6 +74,9 @@
 	.card_holder {
 		flex-direction: row;
 		flex-wrap: wrap;
+	}
+	.header h1 {
+		font-size: 40px;
 	}
 }
 
@@ -112,7 +98,7 @@
 		margin: 0 50px 0 50px;
 	}
 
-	.card_holder {
+	.card-holder {
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
@@ -120,5 +106,8 @@
 	.card {
 		width: 300px;
 		flex-direction: column;
+	}
+	.header h1 {
+		font-size: 56px;
 	}
 }

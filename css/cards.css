@@ -1,4 +1,4 @@
-.card_holder {
+.card-holder {
 	display: flex;
 	align-items: center;
 	align-content: center;
@@ -18,22 +18,21 @@
 	margin: 5px;
 }
 
-.card .card_img {
+.card .card-img {
 	width: 90%;
 	height: 300px;
 	object-fit: cover;
-	
+
 }
 
-.card h2 {
-	color: #0444BF;
-	font: 4vw;
+.card h1 {
+	color: #0AAFF1;
+	font-size: 24px;
 }
 
 .card p {
 	color: #0444BF;
 	font: 0.5vw;
-	font-style: italic;
 }
 
 .card .card_button {

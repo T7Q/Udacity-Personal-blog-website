@@ -1,0 +1,17 @@
+.social {
+	grid-area: social;
+	background: #A796741A;
+	align-self: center;
+}
+
+.social-box {
+	display: flex;
+	padding: 0;
+	flex-direction: row;
+	justify-content: left;
+}
+
+.social-icon {
+	width: 30px;
+	margin-right: 0.5rem;
+}
