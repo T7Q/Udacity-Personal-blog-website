@@ -1,87 +1,93 @@
-@import url(https://fonts.googleapis.com/css?family=Cormorant+Garamond:700i|Fira+Sans);
-@import "navigation.css";
-@import "social.css";
-@import "cards.css";
-
-.body {
-	background-color: #A79674;
-}
-
-.container {
-	display: grid;
-	grid-template-columns: 15px 1fr 15px;
-	grid-template-rows: 40px 40px 100px auto 40px;
-	grid-template-areas:
-	". social ."
-	". nav ."
-	". hd ."
-	". main ."
-	". ft .";
-}
-
 .post {
 	display: grid;
-	grid-template-columns: 15px 1fr 15px;
-	grid-template-rows: 40px 100px auto;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto;
 	grid-template-areas:
-	". post_title post_title."
-	". author_avatar author_info."
-	". post_body .";
+	"title"
+	"author"
+	"post_body";
+	margin: 0 10px 0 10px;
+	background: white;
 }
 
 .post_title {
-	font: #0584F2;
-	text-align: left;
+	grid-area: title;
+}
+
+.post_title h2 {
+	color: #0AAFF1;
+	font-size: 3vw;
+	margin-top: 0;
+}
+
+.author {
+	grid-area: author;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #A79674;
+}
+
+.avatar_img {
+	width: 100px;
+	border-radius: 50%;
+}
+
+.author_info {
+	width: 90%;
+}
+
+.author_info h3 {
+	padding: 0 5px 0 5px;
+}
+
+.post_body {
+	grid-area: post_body;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	/* width: 90%; */
+	align-items: center;
+}
+
+.post_img {
+	width: 90%;
+}
+
+.post_body p {
+	width: 90%;
+}
+
+.return_button {
+	grid-area: return;
+	background-color: #A79674;
+	padding: 5px 10px;
+	font: 0.5vw;
+	text-decoration: none;
+	color: white;
 }
 
 
 /* Medium Screens */
 @media (min-width: 600px) and (max-width:900px) {
-	.navigation {
-		margin: 0 50px 0 50px;
-	}
-
-	.card_holder {
-		flex-direction: row;
-		flex-wrap: wrap;
+	.post {
+		grid-template-columns: 150px 1fr;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+		"title title"
+		"author post_body";
+		margin: 0 30px 0 30px;
 	}
 }
 
 /* Large Screens */
 @media (min-width: 901px) {
-	.container {
-		display: grid;
-		grid-template-columns: 7% 1fr 7%;
-		grid-template-rows: 40px 40px 150px auto 60px;
-		grid-template-areas:
-		". social ."
-		". nav ."
-		". hd ."
-		". main ."
-		". ft .";
-	}
-
-	.navigation {
-		margin: 0 50px 0 50px;
-	}
-
-	.card_holder {
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-
-	.card {
-		width: 300px;
-		flex-direction: column;
-	}
-
 	.post {
-		display: grid;
-		grid-template-columns: 7% 1fr 7%;
-		grid-template-rows: 40px 100px auto;
+		grid-template-columns: 220px 1fr;
+		grid-template-rows: auto auto;
 		grid-template-areas:
-		". title title."
-		". avatar info."
-		". body .";
+		"title title"
+		"author post_body";
+		margin: 0 70px 0 70px;
 	}
 }
