@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Cormorant+Garamond:700i|Fira+Sans);
+@import "navigation.css";
+@import "social.css";
+@import "cards.css";
+
+.body {
+	background-color: #A79674;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 15px 1fr 15px;
+	grid-template-rows: 40px 40px 100px auto 40px;
+	grid-template-areas:
+	". social ."
+	". nav ."
+	". hd ."
+	". main ."
+	". ft .";
+}
+
+.post {
+	display: grid;
+	grid-template-columns: 15px 1fr 15px;
+	grid-template-rows: 40px 100px auto;
+	grid-template-areas:
+	". post_title post_title."
+	". author_avatar author_info."
+	". post_body .";
+}
+
+.post_title {
+	font: #0584F2;
+	text-align: left;
+}
+
+
+/* Medium Screens */
+@media (min-width: 600px) and (max-width:900px) {
+	.navigation {
+		margin: 0 50px 0 50px;
+	}
+
+	.card_holder {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+
+/* Large Screens */
+@media (min-width: 901px) {
+	.container {
+		display: grid;
+		grid-template-columns: 7% 1fr 7%;
+		grid-template-rows: 40px 40px 150px auto 60px;
+		grid-template-areas:
+		". social ."
+		". nav ."
+		". hd ."
+		". main ."
+		". ft .";
+	}
+
+	.navigation {
+		margin: 0 50px 0 50px;
+	}
+
+	.card_holder {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.card {
+		width: 300px;
+		flex-direction: column;
+	}
+
+	.post {
+		display: grid;
+		grid-template-columns: 7% 1fr 7%;
+		grid-template-rows: 40px 100px auto;
+		grid-template-areas:
+		". title title."
+		". avatar info."
+		". body .";
+	}
+}

@@ -1,5 +1,7 @@
 .navigation {
 	grid-area: nav;
+	align-self: center;
+	margin: 0 10px 0 10px;
 }
 
 .navigation-list {
@@ -7,7 +9,7 @@
 	padding: 0;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: center space-evenly;
 }
 
 .navigation-item {
@@ -17,15 +19,10 @@
 .navigation-item a {
 	text-decoration: none;
 	color: #0AAFF1;
-	font-size: 2vw;
-	font-weight: 1000;
+	font-size: 12px;
+	font-weight: 800;
 }
-
 
 .navigation-item a:hover {
 	color: #0444BF;
 }
-
-/* screens wider than 1001px - Desktop */
-/* screens from 481px to 1000px - Tablet */
-/* screens narrower than 480px - Mobile */

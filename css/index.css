@@ -9,53 +9,56 @@
 
 .container {
 	display: grid;
-	grid-template-columns: auto;
-	grid-template-rows: 40px auto 60px auto 60px;
+	grid-template-columns: 15px 1fr 15px;
+	grid-template-rows: 40px 40px 100px auto 40px;
 	grid-template-areas:
-	"social"
-	"hd"
-	"nav"
-	"main"
-	"footer";
+	". social ."
+	". nav ."
+	". hd ."
+	". main ."
+	". ft .";
 }
 
 .social {
 	grid-area: social;
-	background: #A79674;
 	background: #A796741A;
+	align-self: center;
 }
 
-
-.social_box{
+.social_box {
 	display: flex;
 	padding: 0;
 	flex-direction: row;
-	margin: 5px;
 	justify-content: left;
 }
 
 .social_icon {
-	width: 2rem;
+	width: 30px;
+	margin-right: 0.5rem;
 }
 
-
 .header {
-	
 	grid-area: hd;
 	text-align: center;
-	background-image: url("/img/blog_images/kajaking.jpg");
-	background-size:contain;
+	height: 200px;
+	background-image: url("../img/blog_images/banner3.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 .header h1 {
-	color: #0444BF;
+	color: white;
 	font-family: 'Cormorant Garamond', Serif;
-	font-size: 5vw;
+	font-size: 4vw;
+	text-align: center;
+	margin-top: 0;
 }
 
 .main {
 	grid-area: main;
-	background: linear-gradient(#A796741A, white);
+	/* background-color: #A796741A; */
+	background: linear-gradient(#A7967433, #A796741A);
 }
 
 .main h2 {
@@ -67,36 +70,55 @@
 }
 
 .footer {
-	grid-area: footer;
+	grid-area: ft;
 	text-align: center;
 	align-content: center;
+	align-self: center;
 	background: #0AAFF1;
 	color: white;
 }
 
-
-@media (min-width: 600px) and (max-width: 900px) {
-	.card_holder {
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-
-	/* .card {
-		min-height: 250px;
-		min-width: 250px;
-		margin: 10px;
-	} */
+.footer p{
+	font-size: 1vw;
 }
 
+/* Medium Screens */
+@media (min-width: 600px) and (max-width:900px) {
+	.navigation {
+		margin: 0 50px 0 50px;
+	}
+
+	.card_holder {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+
+/* Large Screens */
 @media (min-width: 901px) {
+	.container {
+		display: grid;
+		grid-template-columns: 7% 1fr 7%;
+		grid-template-rows: 40px 40px 150px auto 60px;
+		grid-template-areas:
+		". social ."
+		". nav ."
+		". hd ."
+		". main ."
+		". ft .";
+	}
+
+	.navigation {
+		margin: 0 50px 0 50px;
+	}
+
 	.card_holder {
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
 
-	/* .card {
-		min-height: 250px;
-		min-width: 250px;
-		margin: 10px;
-	} */
+	.card {
+		width: 300px;
+		flex-direction: column;
+	}
 }
